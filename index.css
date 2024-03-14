@@ -1,0 +1,316 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+/* navbar */
+.nav {
+  display: flex;
+  background-color: rgb(7, 7, 27);
+  color: #d1d1d1;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  box-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 15px purple, 0 0 20px purple,
+    0 0 40px purple, 0 0 50px purple, 0 0 80px purple;
+  top: 0;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+}
+.toggle {
+  display: none;
+}
+
+.icon {
+  display: none;
+}
+.my_logo img {
+  width: 100%;
+  max-width: 220px;
+  margin-left: 20px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.menu-item {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link.resume {
+  margin-right: 40px;
+  padding: 5 8px;
+  border: rgb(171, 16, 209) 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: rgb(171, 16, 209);
+  height: 60%;
+  cursor: pointer;
+  padding: 8px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.nav-link.resume:hover {
+  box-shadow: 0 0 5px rgb(202, 50, 202), 0 0 10px rgb(143, 34, 143);
+  transform: scale(1.1);
+}
+.menu-item:hover {
+  transform: scale(1.2);
+  color: rgb(171, 16, 209);
+}
+
+button span {
+  display: inline-block;
+  text-align: center;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 1055px) {
+  .toggle {
+    position: relative;
+    display: inline-block;
+    line-height: 0.5;
+  }
+  .nav {
+    justify-content: left;
+    gap: 2rem;
+  }
+  .nav-menu button {
+    margin-left: 80%;
+  }
+  .nav a {
+    display: none;
+  }
+}
+
+/* homepage */
+
+.homeContainer {
+  height: 110vh;
+  background-image: url("https://4kwallpapers.com/images/wallpapers/outrun-neon-dark-background-purple-1920x1080-4523.jpg");
+}
+.topdiv {
+  display: flex;
+}
+
+.intro_text {
+  margin-top: 200px;
+  float: left;
+  margin-left: 180px;
+  line-height: 0.8;
+  color: white;
+}
+.intro_text.h1 {
+  border: 2px solid red;
+}
+
+.home-img {
+  width: 27%;
+  box-shadow: 0 0 5px rgb(202, 50, 202), 0 0 10px rgb(143, 34, 143),
+    0 0 15px rgb(182, 28, 182), 0 0 20px rgb(218, 31, 218);
+  float: right;
+  border-radius: 500px;
+  /* margin-right: 200px; */
+  margin-top: 66px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.8s ease-in-out;
+  z-index: 0;
+  /* position: relative; */
+}
+
+.home-img:hover {
+  /* width: 30%; */
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* typing effect */
+h2 {
+  font-weight: 600;
+}
+#typedText {
+  color: rgb(143, 34, 143);
+  position: relative;
+}
+#typedText::before {
+  content: "";
+  height: 30px;
+  width: 2px;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+#typedText.stop-blinking::before {
+  animation: none;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.linked {
+  width: 4%;
+  background-color: white;
+  padding: 10px;
+  margin: 10px 10px;
+
+  border-radius: 30px;
+  cursor: pointer;
+}
+.linked:hover {
+  box-shadow: 0 0 5px rgb(202, 50, 202), 0 0 10px rgb(143, 34, 143),
+    0 0 15px rgb(182, 28, 182), 0 0 20px rgb(218, 31, 218);
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.contact_box {
+  margin-top: 10px;
+  width: 40%;
+  display: flex;
+  margin-left: 180px;
+}
+.intro_text h3 {
+  font-size: 32px;
+}
+.intro_text h1 {
+  font-size: 45px;
+}
+.intro_text h2 {
+  font-size: 42px;
+  color: purple;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .my_logo img {
+    width: 80%;
+  }
+  .toggle {
+    display: none;
+  }
+
+  .nav-link.resume {
+    margin-right: 30px;
+    padding: 4 5px;
+  }
+
+  .hombox {
+    height: 500px;
+  }
+
+  .intro_text {
+    margin-top: 180px;
+    margin-left: 50px;
+    float: inline-start;
+  }
+
+  /* .home-img {
+        width: 25%;
+        margin-top: 5px;
+        
+    } */
+
+  .linkedin {
+    width: 7%;
+    padding: 8px;
+  }
+
+  .contact_box {
+    margin-left: 120px;
+  }
+  .intro_text h3 {
+    font-size: 20px;
+  }
+  .intro_text h1 {
+    font-size: 30px;
+  }
+  .intro_text h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .my_logo img {
+    width: 100px;
+    height: 30px;
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+  .toggle {
+    position: relative;
+    display: inline-block;
+    line-height: 0.5;
+  }
+
+  .dropdown_cont {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 100px;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown_cont a {
+    color: rgb(158, 154, 154);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+  }
+
+  .dropdown_cont a:hover {
+    background-color: #ddd;
+  }
+
+  .toggle:hover .dropdown_cont {
+    display: block;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+
+  .intro_text {
+    margin-top: 200px;
+    margin-left: 50px;
+  }
+
+ 
+
+  .linkedin {
+    width: 15%;
+    padding: 8px;
+  }
+
+  .contact_box {
+    margin-left: 60px;
+  }
+  .intro_text h3 {
+    font-size: 15px;
+  }
+  .intro_text h1 {
+    font-size: 20px;
+  }
+  .intro_text h2 {
+    font-size: 20px;
+  }
+}

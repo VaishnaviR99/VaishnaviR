@@ -1,0 +1,78 @@
+/* skills */
+.skillsContainer {
+  background-image: url("https://4kwallpapers.com/images/wallpapers/outrun-neon-dark-background-purple-1920x1080-4523.jpg");
+  width: 100%;
+  height: 700px;
+  justify-content: center;
+}
+
+.skills {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+
+  width: 55%;
+  margin: auto;
+}
+
+.image-container img {
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  width: 100px;
+  height: 90px;
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.image-container img:hover {
+  width: 110px;
+  height: 100px;
+  filter: brightness(150%);
+  box-shadow: 0 0 5px rgb(202, 50, 202), 0 0 10px rgb(143, 34, 143);
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .image-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-link.skills {
+    height: 830px;
+  }
+
+  .image-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .image-container img {
+    margin-left: 10px;
+  }
+}
