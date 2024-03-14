@@ -120,7 +120,7 @@ button span {
     0 0 15px rgb(182, 28, 182), 0 0 20px rgb(218, 31, 218);
   float: right;
   border-radius: 500px;
-  /* margin-right: 200px; */
+  margin-left: 2rem;
   margin-top: 66px;
   cursor: pointer;
   position: absolute;
@@ -219,11 +219,10 @@ h2 {
     float: inline-start;
   }
 
-  /* .home-img {
-        width: 25%;
-        margin-top: 5px;
-        
-    } */
+  .home-img {
+    width: 25%;
+    margin-top: 5px;
+  }
 
   .linkedin {
     width: 7%;
@@ -289,12 +288,17 @@ h2 {
     height: 400px;
   }
 
+  .home-img {
+    width: 35%;
+    margin-top: 30%;
+    margin-left: -70px;
+    border-radius: 100px;
+  }
+
   .intro_text {
     margin-top: 200px;
     margin-left: 50px;
   }
-
- 
 
   .linkedin {
     width: 15%;
